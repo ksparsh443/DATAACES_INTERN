@@ -1,0 +1,296 @@
+SPARSH KANDPAL
+
+Open Source AI Models
+MODELS CHOSEN : 1. GPT  2. PYTORCH   3. TENSORFLOW   4. GENSIM 
+
+1.	GPT
+INTRODUCTION
+GENERATIVE PRE TRAINED TRANSFORM, is a type of Large Language Model Neural Network that have the ability to perform various natural language processing tasks such as answering questions, summarising texts, etc
+
+It uses Deep Learning to it use deep learning to produce texts equivalent to human.
+
+Working
+The working of GPT can be Segmented into the following.
+
+a.	Pre-Training: During this phase the model learns to predict the next word in a sentence. It Involves processing a sequence of words and predicting the probability distribution over the vocabulary for the next word.
+b.	Unidirectional Attention:  GPT has a self-attention mechanism which captures contextual relationships between words effectively. The attention mechanism is designed in such a way that each position can only attend to the position that precedes it in the sequence. This ensures that the model does not have access to future word when generating a sequence, which eventually helps in coherent text generation, i.e., the process of producing text that flows naturally, follows a logical structure, and maintain context throughout.
+c.	Positional encoding: It is a vital concept within the transformer architecture, as exemplified in models like GPT. Unlike recurrent models, transformers process words simultaneously, lacking inherent awareness of word order. To address this, positional encoding supplements word embeddings with unique patterns based on sinusoidal functions. By incorporating these encodings, the model discerns each word's position, allowing it to understand and capture the sequential context of words in a sentence. This is essential for generating coherent and contextually relevant text. As the transformer progresses through its layers, the positional encodings consistently accompany the word embeddings, ensuring the preservation of positional information and enabling effective processing of sequential data.
+d.	Fine Tuning: We can Fine tune GPT for say sentiment analysis by providing it with labelled sentiment data. During this phase, task specific data updates the model’s parameters so that it can perform the desired task more effectively.
+
+USE CASES:
+
+1. Text Generation and Creative Writing:
+GPT models are adept at generating coherent and contextually relevant text. They can be used for creative writing, including the generation of stories, poetry, and even scripts for movies or video games. They can also be utilized to assist content creators in brainstorming ideas and drafting content.
+
+Example: Chatbots and virtual assistants like OpenAI's ChatGPT can generate engaging and informative responses in natural language, making them valuable tools for customer support and information dissemination.
+
+2. Content Summarization:
+GPT models can condense lengthy articles, reports, or documents into concise and informative summaries. This application is particularly useful for quickly extracting key insights from a large volume of text.
+
+Example: The tool Copy.ai uses GPT models to create summaries, bullet points, and key takeaways from longer pieces of content, saving time for content creators and readers alike.
+
+3. Language Translation:
+GPT models can facilitate language translation by generating accurate translations between various languages. This capability is essential for breaking down language barriers and promoting cross-cultural communication.
+
+  Example:   Google's multilingual translation services and apps like DeepL leverage GPT-based models to provide accurate and contextually relevant translations.
+
+4. Question Answering:
+GPT models excel at answering questions by generating detailed and informative responses. They can be employed in educational settings, information retrieval systems, and online search engines.
+
+Example: OpenAI's InstructGPT can answer a wide array of user questions, making it useful for educational platforms that require detailed explanations and responses.
+
+5. Text Completion and Writing Assistance:
+GPT models can assist writers by suggesting sentence completions, paraphrasing, and providing grammatical corrections. They can enhance the overall writing process and improve the quality of written content.
+
+Example:Writing tools like Grammarly and ProWritingAid employ GPT technology to offer real-time writing suggestions and corrections.
+
+6. Code Generation:
+GPT models can generate code snippets and assist programmers in coding tasks. They can understand natural language descriptions of coding problems and provide corresponding code solutions.
+
+Example:GitHub's Copilot uses GPT-based models to suggest code snippets and auto-complete code while developers write in various programming languages.
+
+7. Medical Text Analysis:
+GPT models can analyze medical texts, including research papers and patient records, to extract relevant information, assist in medical research, and provide insights to healthcare professionals.
+
+Example: IBM's Watson for Oncology uses GPT technology to assist oncologists in formulating personalized treatment plans for cancer patients by analyzing medical literature.
+8. Sentiment Analysis and Market Research:
+GPT models can determine the sentiment expressed in text, making them valuable for gauging public opinion, conducting market research, and analyzing social media trends.
+
+Example: Social media monitoring tools like Brandwatch utilize GPT models to analyze online conversations and extract sentiment insights from user-generated content.
+
+
+
+
+
+
+
+
+2.	TensorFlow: Developed by Google, is a prominent open-source machine learning framework that operates on the principle of providing a comprehensive toolkit for various stages of machine learning model development. It supports both static and dynamic computation graphs, catering to a wide range of use cases.
+
+At its core, TensorFlow's working is centered around the concept of a dataflow graph, where computations are represented as nodes and the flow of data between these nodes defines the operations and their dependencies. This graph-based approach offers several benefits:
+
+1. Flexibility TensorFlow allows users to create complex neural network architectures and computations with ease. The dynamic computation graph enables modifications during runtime, enhancing flexibility in building models.
+
+2. Optimization: The graph structure enables TensorFlow to analyze and optimize the computation flow. It can identify opportunities for parallel execution, making better use of hardware resources and enhancing performance.
+
+3. Deployment: TensorFlow supports model deployment across various platforms, from cloud-based servers to mobile devices and embedded systems. This ensures that models developed in TensorFlow can be efficiently integrated into real-world applications.
+
+4. Efficiency: By representing computations as a graph, TensorFlow can optimize memory usage and minimize redundant calculations, leading to more efficient execution of complex operations.
+
+5. Visualization: TensorFlow provides tools for visualizing the computation graphs, aiding developers in understanding the structure and relationships of their models, which is particularly useful when dealing with intricate architectures.
+
+TensorFlow finds extensive application in diverse domains of machine learning. In image and speech recognition, it powers convolutional neural networks (CNNs) and recurrent neural networks (RNNs) to extract features and patterns from visual and auditory data. In natural language processing, TensorFlow facilitates the creation of models like sequence-to-sequence models for translation and transformers for language understanding. Additionally, TensorFlow plays a key role in reinforcement learning, enabling the training of agents to make decisions based on interactions with their environment.
+
+
+TensorFlow Components
+Tensor
+Tensorflow’s name is directly derived from its core framework: Tensor. In Tensorflow, all the computations involve tensors. A tensor is a vector or matrix of n-dimensions that represents all types of data. All values in a tensor hold identical data type with a known (or partially known) shape. The shape of the data is the dimensionality of the matrix or array.
+A tensor can be originated from the input data or the result of a computation. In TensorFlow, all the operations are conducted inside a graph. The graph is a set of computation that takes place successively. Each operation is called an op node and are connected to each other.
+The graph outlines the ops and connections between the nodes. However, it does not display the values. The edge of the nodes is the tensor, i.e., a way to populate the operation with data.
+ 
+Graphs
+TensorFlow makes use of a graph framework. The graph gathers and describes all the series computations done during the training. The graph has lots of advantages:
+•	It was done to run on multiple CPUs or GPUs and even mobile operating system
+•	The portability of the graph allows to preserve the computations for immediate or later use. The graph can be saved to be executed in the future.
+•	All the computations in the graph are done by connecting tensors together
+•	A tensor has a node and an edge. The node carries the mathematical operation and produces an endpoints outputs. The edges the edges explain the input/output relationships between nodes.
+TensorFlow Algorithms
+Below are the algorithms supported by TensorFlow:
+Currently, TensorFlow 1.10 has a built-in API for:
+•	Linear regression: tf.estimator.LinearRegressor
+•	Classification:tf.estimator.LinearClassifier
+•	Deep learning classification: tf.estimator.DNNClassifier
+•	Deep learning wipe and deep: tf.estimator.DNNLinearCombinedClassifier
+•	Booster tree regression: tf.estimator.BoostedTreesRegressor
+•	Boosted tree classification: tf.estimator.BoostedTreesClassifier
+
+ 
+
+USE CASES
+Certainly! TensorFlow is a popular library used for building and training machine learning models. Let's break down the mechanism of TensorFlow in simple terms:
+
+Imagine you're teaching a computer to recognize whether a fruit is an apple or an orange. Here's how TensorFlow helps with that:
+
+1.   Graph Creation:  
+Think of TensorFlow as a tool to create a step-by-step recipe, like a cooking recipe, for the computer to follow. This recipe is called a "graph." In our example, the graph outlines the steps the computer needs to take to learn and make decisions about fruits.
+
+2.   Data Flow:  
+TensorFlow helps the computer understand the data it's working with. Just like you need to know the color, shape, and texture of fruits to identify them, TensorFlow helps the computer learn from a bunch of examples (data) of apples and oranges.
+
+3.   Training:  
+To teach the computer, you show it many pictures of apples and oranges along with labels that say whether each picture is an apple or an orange. TensorFlow adjusts the "ingredients" in its recipe to improve the computer's understanding. It's like tweaking the recipe to make the computer smarter at recognizing the fruits.
+
+4.   Model Creation:  
+After lots of practice, TensorFlow helps the computer create a "model." This model is like the computer's brain—it knows how to tell apples from oranges based on the patterns it learned from the training data.
+
+5.   Making Predictions:  
+Now that the computer has a model, you can show it new pictures of fruits, and it will use what it learned to make predictions. TensorFlow helps the computer follow its recipe to make accurate decisions about whether the new fruit is an apple or an orange.
+
+6.   Improvement:  
+Just like you can improve your cooking skills by trying new recipes and learning from your mistakes, TensorFlow allows you to fine-tune the model if it makes mistakes. You can give it more examples and help it become better at its task.
+
+So, in simple terms, TensorFlow helps computers learn from data and make decisions, just like following a recipe to cook a delicious meal. It's a powerful tool that makes complex machine learning tasks possible even if you're not a computer expert.
+
+
+ 
+TENSORFLOW NEURAL NETWORK
+
+	ADDITONAL FEATURES
+It is mainly used for deep learning or machine learning problems such as Classification, Perception, Understanding, Discovering Prediction, and Creation.
+1. Voice/Sound Recognition
+Voice and sound recognition applications are the most-known use cases of deep-learning. If the neural networks have proper input data feed, neural networks are capable of understanding audio signals.
+For example:
+Voice recognition is used in the Internet of Things, automotive, security, and UX/UI.
+Sentiment Analysis is mostly used in customer relationship management (CRM).
+Flaw Detection (engine noise) is mostly used in automotive and Aviation.
+Voice search is mostly used in customer relationship management (CRM)
+2. Image Recognition
+Image recognition is the first application that made deep learning and machine learning popular. Telecom, Social Media, and handset manufacturers mostly use image recognition. It is also used for face recognition, image search, motion detection, machine vision, and photo clustering.
+For example, image recognition is used to recognize and identify people and objects in from of images. Image recognition is used to understand the context and content of any image.
+For object recognition, TensorFlow helps to classify and identify arbitrary objects within larger images.
+This is also used in engineering application to identify shape for modeling purpose (3d reconstruction from 2d image) and by Facebook for photo tagging.
+For example, deep learning uses TensorFlow for analyzing thousands of photos of cats. So a deep learning algorithm can learn to identify a cat because this algorithm is used to find general features of objects, animals, or people.
+3. Time Series
+Deep learning is using Time Series algorithms for examining the time series data to extract meaningful statistics. For example, it has used the time series to predict the stock market.
+A recommendation is the most common use case for Time Series. Amazon, Google, Facebook, and Netflix are using deep learning for the suggestion. So, the deep learning algorithm is used to analyze customer activity and compare it to millions of other users to determine what the customer may like to purchase or watch.
+For example, it can be used to recommend us TV shows or movies that people like based on TV shows or movies we already watched.
+4. Video Detection
+The deep learning algorithm is used for video detection. It is used for motion detection, real-time threat detection in gaming, security, airports, and UI/UX field.
+For example, NASA is developing a deep learning network for object clustering of asteroids and orbit classification. So, it can classify and predict NEOs (Near Earth Objects).
+5. Text-Based Applications
+Text-based application is also a popular deep learning algorithm. Sentimental analysis, social media, threat detection, and fraud detection, are the example of Text-based applications.
+For example, Google Translate supports over 100 languages.
+Some companies who are currently using TensorFlow are Google, AirBnb, eBay, Intel, DropBox, Deep Mind, Airbus, CEVA, Snapchat, SAP, Uber, Twitter, Coca-Cola, and IBM.
+
+
+3.	PYTORCH: PyTorch is founded on the principle of dynamic computation graphs. Unlike traditional frameworks that use static computation graphs, where the structure of the graph is determined beforehand and remains fixed, PyTorch enables the creation of dynamic graphs. This means that the graph can be modified and adjusted during runtime, allowing for greater flexibility in model construction and adaptation to changing conditions.
+
+Working:
+PyTorch operates by using tensors, which are multi-dimensional arrays similar to NumPy arrays. These tensors represent data and operations within the computation graph. The dynamic nature of PyTorch allows developers to build and modify computational graphs in a more intuitive and flexible manner. This is particularly advantageous during prototyping and experimentation, as developers can easily make changes to the model architecture, test hypotheses, and experiment with new ideas without the constraints of a fixed graph.
+
+The dynamic computation graph in PyTorch provides benefits such as:
+- Easier debugging and error tracing due to immediate execution of operations.
+- Better support for irregular or dynamic data structures.
+- Enhanced control over the flow of computations.
+
+Applications:
+PyTorch finds a broad spectrum of applications across machine learning and deep learning tasks. Its flexibility and dynamic nature make it particularly suitable for research and experimentation. Some notable applications include:
+
+Custom Model Architectures: PyTorch allows users to create custom neural network architectures with intricate designs and complex connections. This flexibility is crucial for researchers exploring new model structures.
+
+-Rapid Prototyping: Researchers and developers often favor PyTorch for its ease of use and quick iteration capabilities. This is valuable for rapidly developing and testing new ideas.
+
+-Computer Vision: PyTorch is widely used in computer vision tasks like image classification, object detection, and image segmentation, due to its adaptability in designing models for image-related tasks.
+
+Natural Language Processing (NLP): The dynamic computation graph of PyTorch is advantageous for sequence-based tasks in NLP, such as text generation, sentiment analysis, and machine translation.
+
+Cutting-edge Research: PyTorch has gained traction in the research community due to its support for the latest advancements in deep learning. Researchers often choose PyTorch for implementing and experimenting with novel algorithms.
+
+
+
+
+4.	GENSIM
+
+Principles
+  Word Embeddings and Models:  
+Word embeddings are mathematical representations of words that capture their semantic meanings and relationships based on their contextual usage in a large corpus of text. Gensim offers several models to generate these embeddings, including Word2Vec, FastText, and Doc2Vec.
+
+1.   Word2Vec:  
+Word2Vec is a popular word embedding model that learns to represent words in a continuous vector space. It has two primary training methods: Continuous Bag of Words (CBOW) and Skip-gram. CBOW predicts a target word from its context words, while Skip-gram predicts context words from a target word. The resulting word vectors capture semantic relationships and allow for calculations like word analogies (e.g., "king - man + woman = queen").
+
+2.   FastText:  
+FastText is an extension of Word2Vec that introduces subword information by breaking words into character n-grams. This is particularly useful for handling out-of-vocabulary words and capturing morphological information. FastText can generate embeddings for individual words as well as subwords, enabling better representation of rare and unseen words.
+
+3.   Doc2Vec:  
+Doc2Vec extends the idea of Word2Vec to entire documents. It learns to generate document embeddings by predicting words from context in a similar manner to Word2Vec. Each document is associated with a unique vector, allowing for tasks like document similarity and classification.
+
+Principles and Workflow:
+1.Data Preparation:
+Gensim requires a collection of text documents for training. This corpus can be preprocessed by tokenizing, removing stop words, and performing other text cleaning tasks.
+
+2. Model Training
+For Word2Vec and FastText, Gensim's `Word2Vec` and `FastText` classes train the word embeddings on the provided corpus. You specify parameters like vector dimension, context window size, and training algorithm.
+
+For Doc2Vec, Gensim's `Doc2Vec` class trains document embeddings. It associates unique tags with each document and learns the vector representations.
+
+3. Using Pre-trained Models:
+Gensim also provides access to pre-trained word embeddings like "word2vec-google-news-300," which contains embeddings trained on a massive Google News corpus. These embeddings can be loaded and used directly without training.
+
+4. Similarity and Analysis:
+After training or loading embeddings, you can calculate word or document similarity using vector operations like cosine similarity. This enables tasks such as finding similar words or documents.
+WORD2VEC ALGORITHM
+ 
+Imagine you're teaching a computer to understand words like humans do. You want the computer to learn the meanings of words based on how they're used together in sentences. Word2Vec is like a game for the computer to figure out these meanings.
+
+1.   Starting Point: Words and Vectors:  
+You begin by giving the computer a bunch of sentences. The computer's job is to convert each word into a special number called a "vector." These vectors represent the meaning of words in a way that the computer can understand.
+
+2.   Context and Target Words:  
+Think of each sentence as a story. In this story, every word has a group of nearby words that it hangs out with. These nearby words are called the "context" words, and the word we're trying to understand is the "target" word.
+
+3.   Prediction Game:  
+Now, the computer plays a game. It looks at a target word and tries to guess its context words. For example, if the target word is "apple," the context words might be "juicy," "fruit," and "red."
+
+4.   Adjusting the Vectors: Learning Time!  
+The computer's guesses might not be perfect at first, but that's okay. It keeps playing the game with many sentences, adjusting the word vectors each time it makes a guess. It's like learning from mistakes. The goal is to get better at guessing context words for each target word.
+
+5.   Vector Magic: Semantic Relationships:  
+As the computer gets better, something magical happens. Words that are used in similar ways end up having similar vectors. So, words like "apple" and "fruit" have vectors that are close in meaning. This is how Word2Vec captures the relationships between words!
+
+6.   Word Math and Analogies:  
+With these word vectors, the computer can do cool things. It can perform word math! For example, if you subtract the vector for "king" and add the vector for "woman," you get a new vector that's close to "queen." It's like the computer understands word analogies.
+
+7.   Using the Vectors:  
+Once the computer has learned the word vectors, you can use them for various tasks. You can find similar words by looking at words with similar vectors. You can also compare how different words are related based on their vectors.
+
+In a nutshell, Word2Vec is a game where the computer learns to understand words by predicting their nearby words. Through this process, it creates vectors that capture the meanings and relationships between words. These vectors are then used to do smart things like finding similar words or solving word analogies.
+Gensim GitHub Repository](https://github.com/RaRe-Technologies/gensim)
+
+
+
+WHAT IS THE DIFFERENCE BETWEEN EACH MODEL?
+
+  1. GPT (Generative Pre-trained Transformer):  
+     Architecture:   Based on the Transformer architecture, specifically designed for language tasks.
+    Primary Use:   Language generation, text completion, question answering, summarization.
+     Pre-trained Models:   GPT-3, GPT-2, GPT-1.
+    Training Strategy:   Large-scale unsupervised pre-training, followed by fine-tuning for specific tasks.
+    Core Mechanism:   Self-attention mechanism for capturing contextual relationships in text.
+     Example:   OpenAI's GPT-3 used for natural language understanding and generation.
+
+  2. PyTorch:  
+     Programming Style:   Dynamic computation graphs with imperative programming.
+     Core Use:   Building and training neural networks for various machine learning tasks.
+    Key Features:   Dynamic graph allows for on-the-fly architecture changes and ease of debugging.
+    Automatic Differentiation:   Supports automatic computation of gradients for backpropagation.
+     Research Focus:   Preferred by researchers due to its flexibility and ease of experimentation.
+     Example:   Creating custom neural network architectures for image classification.
+
+  3. TensorFlow:  
+   Programming Style:   Static and dynamic computation graphs (TensorFlow 1.x and TensorFlow 2.x, respectively).
+     Core Use:   Building scalable machine learning models for both research and production.
+    Key Features:   TensorBoard for visualization, optimized production deployment (TensorFlow 1.x), and eager execution (TensorFlow 2.x).
+    Automatic Differentiation:   Supports automatic differentiation for gradient computations.
+     Scalability:   Suited for large-scale deployments and distributed computing.
+     Example:   Developing production-grade image recognition systems.
+
+4. Gensim:
+   Focus: Natural language processing tasks, particularly word embeddings and text analysis.
+   Word Embeddings Supports Word2Vec, FastText, and Doc2Vec models.
+   Use Cases: Finding similar words, text classification, topic modelling, document similarity analysis.
+  Text Preprocessing: Provides tools for text cleaning, tokenization, and stop-word removal.
+   Example: Generating word embeddings to understand semantic relationships between words.
+
+
+
+REFERENCES
+1.	https://www.guru99.com/what-is-tensorflow.html
+2.	https://chat.openai.com/
+3.	https://www.javatpoint.com/tensorflow-introduction
+4.	https://zapier.com/blog/how-does-chatgpt-work/
+5.	https://pytorch.org/
+6.	https://www.tensorflow.org/
+7.	https://pypi.org/project/gensim/
+8.	https://radimrehurek.com/gensim/
+
+
