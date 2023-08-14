@@ -22,3 +22,4 @@ Gensim
 Gensim is an open source library for natural language processing. It is used for tasks such as topic modeling, sentiment analysis, and word embedding.
 
 Gensim is known for its speed and efficiency. It can be used to process large corpora of text quickly and accurately. Gensim is also easy to use, with a simple and intuitive API.
+![artificial-intelligence-artificial](https://github.com/ksparsh443/DATAACES_INTERN/assets/84833857/d987fd0a-6120-4f21-b222-49e9834447d1)
